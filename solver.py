@@ -42,7 +42,6 @@ class SudokuSolver:
 
     def solve(self):
         self.setConstraints()
-        #self.prob.writeLP('Sudoku.lp')
         self.prob.solve()
         row = []
         solvedPuzzle = []
