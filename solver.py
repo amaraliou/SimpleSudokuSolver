@@ -58,5 +58,7 @@ class SudokuSolver:
         
 if __name__ == '__main__':
     puzzle = SudokuScraper(level = 4).getSudoku()
+    SudokuBoard(puzzle).ppBoard()
+    print("\n\n")
     solved = SudokuSolver(puzzle).solve()
     SudokuBoard(solved).ppBoard()
