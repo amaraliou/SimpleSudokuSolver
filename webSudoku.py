@@ -20,6 +20,9 @@ class SudokuBoard:
 
     def setCell(self, row, col, val):
         self.board[row - 1][col - 1] = val
+    
+    def getBoard(self):
+        return self.board
 
 class SudokuScraper:
 
