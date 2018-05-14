@@ -10,6 +10,7 @@ WIDTH = HEIGHT = MARGIN * 2 + SIDE * 9
 #Implement a solve button + function
 #Implement Game Checkers + levels
 #Scrape Thousands of sudokus to use as a base rather than scraping every time
+#implement clear single cell
 #possibly implement a 'sudoku from image' function (Open CV/Tesseract)
 
 class SudokuUI(Frame):
