@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 from urllib2 import urlopen
-import selenium
 
 class SudokuBoard:
 
@@ -39,9 +38,12 @@ class SudokuScraper:
             row = []
             for j in range(9):
                 cell = self.soup.find('input', {'id': 'f' + str(j) + str(i)}).get('value')
-                if cell:
-                    row.append(int(cell))
+                if cell or not cell == 'NoneType':
+                    row.append(cell)
                 else:
-                    row.append(0)
+                    row.append('0')
             self.sudoku.append(row)
         return self.sudoku
+
+if __name__ == '__main__':
+    pass
